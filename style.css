@@ -1,0 +1,310 @@
+/*GERAL*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+ }
+
+ .container-imgs h2, .container-formacao h2, .container-contato h2 {
+    color: #F43869;
+    font-family: "Trocchi", serif;
+    font-size: 48px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+/*MENU*/
+
+.container-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to left, #FFD3D8, #FF8F9F, #ebb1b1 );
+    background-size: 500% 100%;
+    padding: 20px;
+    animation: degrade-feliz 5s infinite alternate;
+}
+
+@keyframes degrade-feliz {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+.menu-lista {
+    display: flex;
+    padding: 30px;
+}
+
+.menu-lista li a {
+    color: #131313;
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 16px;
+    padding: 10px;
+}
+
+.menu-lista li a:hover {
+    color:#F43869;
+}
+
+/*HEADER*/
+
+.container-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 60px;
+    margin: 0 auto;
+}
+
+.header-lista li h2{
+    color: #F43869;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.header-lista li h1{
+    font-family: "Trocchi", serif;
+    font-size: 60px;
+    padding: 16px;
+}
+
+.header-lista a img {
+    margin-right: 8px;
+}
+
+.header-lista a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ebb1b1;
+    border-radius: 10px;
+}
+
+/*TRABALHOS*/
+
+.container-imgs {
+    background-color: #FFEBED;
+    padding-bottom: 60px;
+}
+
+.imgs-lista {
+   display: flex;
+   justify-content: space-around;
+
+}
+
+.itens-lista {
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+.btn {
+    color: #131313;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 4px 13px 0 #383838);
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );  
+    position: absolute;
+    z-index: 1;
+    right: 25%;
+    left: 25%;
+    top: 40%;
+}
+
+.btn:hover {
+    background-color: #fff;
+}
+
+/*FORMAÇÃO*/
+
+.cursos-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.cursos-lista li {
+    background-color: #ebb1b1;
+    padding: 20px;
+    margin-bottom: 16px;
+    color: #131313;
+    font-size: 24px;
+}
+
+.btn-cursos {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: #F43869;
+    color: #fff;
+}
+
+.btn-cursos:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/*CONTATO*/
+
+.container-contato {
+    background-color: #FFEBED;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.container-contato p {
+    color: #131313;
+    font-size: 20px;
+}
+
+/*FOOTER*/
+
+.container-footer {
+    background-image: linear-gradient(to left, #FFD3D8, #ebb1b1);
+    padding: 30px;
+}
+
+.container-footer p {
+    color: #131313;
+    font-size: 16px;
+    text-align: center;
+}
+
+/*RESPONSIVO*/
+
+@media(max-width: 1200px) {
+    .header-lista li h1 {
+        font-size: 40px;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+    .header-lista li h2, .menu-lista li a, .btn, .cursos-lista li,  .ps-contato p {
+        font-size: 20px;
+    }
+    .itens-lista img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+@media(max-width: 900px) {
+    .header-lista li h1 {
+        font-size: 40px;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+    .header-lista li h2, .menu-lista li a, .btn, .cursos-lista li,  .ps-contato p {
+        font-size: 20px;
+    }
+    .itens-lista img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+@media(max-width: 600px) {
+    .container-menu {
+        padding: 15px;
+    }
+    .menu-lista li a, .btn, .cursos-lista li,  .ps-contato p {
+        font-size: 16px;
+    }
+    .marca {
+        width: 60px;
+    }
+    .header-lista li h2 {
+        display: none;
+    }
+    .header-lista li h1 {
+        font-size: 24px;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+    .img-pati {
+        width: 200px;
+    }
+    .btns-redes {
+        width: 44px;
+    }
+    .container-formacao h2, .container-imgs h2, #contato {
+        font-size: 24px;
+    }
+    .container-imgs {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .itens-lista img {
+        width: 200px;
+        height: 200px;
+    }
+  
+    .container-footer p {
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 400px) {
+    .container-menu {
+        padding: 15px;
+    }
+    .header-lista li h2, .menu-lista li a, .btn, .cursos-lista li,  .ps-contato p {
+        font-size: 16px;
+    }
+    .marca {
+        width: 60px;
+    }
+
+    .header-lista li h1 {
+        font-size: 24px;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+    .img-pati {
+        width: 200px;
+    }
+    .btns-redes {
+        width: 44px;
+    }
+    .container-formacao h2, .container-imgs h2, #contato {
+        font-size: 24px;
+    }
+    .container-imgs {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .itens-lista img {
+        width: 200px;
+        height: 200px;
+    }
+  
+    .container-footer p {
+        font-size: 10px;
+    }
+}
+
+
+

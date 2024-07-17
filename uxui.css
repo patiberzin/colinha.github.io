@@ -1,0 +1,52 @@
+/*GERAL*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+ }
+
+ /*MENU*/
+
+ .container-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to left, #FFD3D8, #FF8F9F, #ebb1b1 );
+    background-size: 500% 100%;
+    padding: 20px;
+    animation: degrade-feliz 5s infinite alternate;
+}
+
+@keyframes degrade-feliz {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+.menu-lista {
+    display: flex;
+    padding: 30px;
+}
+
+.menu-lista li a {
+    color: #131313;
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 16px;
+    padding: 10px;
+}
+
+.menu-lista li a:hover {
+    color:#F43869;
+}
